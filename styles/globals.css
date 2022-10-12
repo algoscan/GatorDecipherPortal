@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #__next {
+	@apply h-full bg-accent;
+	background: url('/gator3.png') repeat, #1EF8E4;
+	background-size: 125px;
+	font-family: 'Inter', Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+#__next {
+	@apply flex justify-center items-center;
+}
+
+.loader {
+	width: 36px;
+	height: 36px;
+	border: 3px solid #FFF;
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	animation: rotation 1s linear infinite;
+}
+.loader::after {
+	content: '';  
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	border: 3px solid;
+	border-color: #1EF8E4 transparent;
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+} 
